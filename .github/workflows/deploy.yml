@@ -22,5 +22,6 @@ jobs:
         script: |
           cd ~/Decarbonize-TH-deployment
           git pull origin main
-          docker compose -f docker-compose.prod.yaml pull
-          docker compose -f docker-compose.prod.yaml up -d --force-recreate --build
+          docker compose -f docker-compose.prod.yaml down --remove-orphans
+          docker system prune -af --volumes
+          docker compose -f docker-compose.prod.yaml up -d --pull always --force-recreate
