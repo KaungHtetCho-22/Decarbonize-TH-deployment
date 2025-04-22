@@ -4,7 +4,7 @@ services:
   carbon-api:
     image: koala007/carbon-api:v1.3.4
     ports:
-      - '8000:5000'
+      - '8000:5050'
     restart: always
 
   carbon-ui:
