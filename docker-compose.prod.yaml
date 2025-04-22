@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   carbon-api:
-    image: koala007/carbon-api:v1.4.3-529d88b
+    image: koala007/carbon-api:v1.4.4-c452dab
     ports:
       - '8000:5050'
     restart: always
 
   carbon-ui:
-    image: koala007/carbon-ui:v1.4.3-529d88b
+    image: koala007/carbon-ui:v1.4.4-c452dab
     ports:
       - '3000:3000'
     restart: always
